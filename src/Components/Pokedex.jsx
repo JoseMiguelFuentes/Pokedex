@@ -1,6 +1,6 @@
 
 import React from 'react';
-import buttonPokeball from '../images/pokeball-3.png'
+import buttonPokeball from '../Images/pokeball-3.png'
 import '../css/pokedex.css'
 
 //Librerias
