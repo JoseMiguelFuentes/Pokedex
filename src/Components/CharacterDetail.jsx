@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../css/characterDetail.css'
-import Pokelogo from '../Images/Pokelogo.png'
+import pokelogo from '../Images/Pokelogo.png'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -71,7 +71,7 @@ const CharacterDetail = ( itemId ) => {
         <img id='ball' src={ball} alt="ball" />
       </article>
       <header>
-      <img className='pokelogo' src={Pokelogo} alt="Pokelogo" />
+      <img className='pokelogo' src={pokelogo} alt="Pokelogo" />
       </header>
       <article className='card__main'>
         <img className='pokemon'
