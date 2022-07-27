@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../css/characterDetail.css'
-import Pokelogo from '../images/Pokelogo.png'
+import Pokelogo from '../Images/Pokelogo.png'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
