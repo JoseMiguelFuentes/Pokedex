@@ -1,0 +1,216 @@
+.pokedex{
+  background-color: bisque;
+}
+.pokeGreet{
+  background: radial-gradient( circle, rgb(172, 15, 15) 0%, rgb(28, 17, 17) 100%);
+  border-radius: 45%;
+  width: 80%;
+  color: #fff;
+  /* box-shadow: 0px 0px 8px 1px rgb(0, 0, 0); */
+  animation: shadow linear 5s infinite;
+}
+@keyframes shadow {
+  0%{
+    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0),0px 0px 8px 1px rgb(172, 15, 143);
+  }
+  25%{
+    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0),0px 0px 20px 3px rgb(172, 15, 143);
+  }
+  50%{
+    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0),0px 0px 8px 1px rgb(172, 15, 143);
+  }
+ 75% {
+    box-shadow:  0px 0px 2px 1px rgb(0, 0, 0),0px 0px 20px 3px rgb(172, 15, 143);
+  }
+  100%{
+    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0),0px 0px 8px 1px rgb(172, 15, 143);
+  }
+  
+}
+
+.pokeGreet h1{
+  font-weight: 600;
+  text-shadow: -6px 4px 3px rgb(0, 0, 0);
+}
+.pokeGreet p{
+  font-weight: 600;
+  text-shadow: -6px 4px 3px rgb(0, 0, 0);
+}
+
+
+.buttonPokeball{
+  border: none;
+  width: 1.5rem;
+  height: auto;
+  background-color: transparent;
+  animation: rotationButton linear 1s 3;
+  transition: 150ms ease
+}
+@keyframes rotationButton {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+form2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(172, 15, 15);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.pokebox{
+  width: 100%;
+  height: auto;
+  padding: 0;
+  line-height: -10px;
+}
+
+.pokeball{
+  width: 100%;
+}
+.items-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding-bottom: 80px;
+  margin-top: 30px;
+}
+.page-number{
+  width: 3vw;
+  height: 3vw;
+  background: radial-gradient( circle, rgb(46, 161, 152) 0%, rgb(28, 17, 17) 100%);
+  border-radius: 16%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #ffffff;
+  font-size: calc(1px + 1.8vw)
+}
+
+.pages-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  gap: 1%;
+  align-items: center;
+  padding: 1.5vw;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.btn-main{
+  width: auto;
+  height: 5vw;
+  border-radius: 10%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 1%;
+  font-size: calc(1px + 1.8vw);
+  background: radial-gradient( circle, rgb(46, 161, 152) 0%, rgb(28, 17, 17) 100%);
+}
+.shadow{
+  box-shadow: 0px 0px 8px 1px rgb(172, 15, 15);
+}
+#input2{
+  outline: none;
+  border-radius: 4%;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  cursor: text;
+  color: rgb(255, 255, 255);
+  animation: colorToggle linear 3s infinite;
+  transition: 0ms;
+}
+#input2:focus{
+  animation: none;
+  background: black;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+}
+@keyframes colorToggle {
+  0%{
+    border-bottom: 2px solid rgb(239, 22, 22);
+    border-top: 2px solid rgb(239, 22, 22) ;
+  }
+  20%{
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+  }
+  30%{
+    border-bottom: 2px solid rgb(13, 223, 90);
+    border-top: 2px solid rgb(13, 223, 90);
+  }
+  40%{
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+  }
+  50%{
+    border-bottom: 2px solid rgb(3, 7, 6);
+    border-top: 2px solid rgb(3, 7, 6);
+  }
+  60%{
+    border-bottom: 2px solid transparent;
+    border-top:  2px solid transparent;
+  }
+  70%{
+    border-bottom: 2px solid rgba(192, 230, 28, 0.712);
+    border-top:  2px solid rgba(192, 230, 28, 0.712);
+  }
+  80%{
+    border-bottom: 2px solid transparent;
+    border-top:  2px solid transparent;
+  }
+  90%{
+    border-bottom: 2px solid rgb(211, 35, 35);
+    border-top:  2px solid rgb(211, 35, 35);
+  }
+  1000%{
+    border-bottom: 2px solid transparent;
+    border-top:  2px solid transparent;
+  }
+}
+
+select{
+  /* appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  outline: none;
+  border-radius: 4%;
+  background: transparent;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  cursor: pointer;*/
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent; 
+
+	display: inline-block;
+	cursor: pointer;
+  padding: 7px 10px;
+  outline: 0; 
+  /* border: 0; */
+	border-radius: 0;
+	background: bisque;
+	color: #7b7b7b;
+	font-size: .7em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+  margin-bottom: 2%;
+}

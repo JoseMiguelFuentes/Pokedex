@@ -1,0 +1,136 @@
+
+.firstPage{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+.firstPage h3{
+  color: #fff;
+}
+.card{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.29);
+  left: auto;
+  right: auto;
+  border-radius: 5%;
+  box-shadow: 0px 0px 15px 5px rgb(172, 15, 15);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.charizard{
+  border-radius: 5%;
+  position: relative;
+  bottom: 0;
+  width:  100%;
+  height: auto;
+  grid-area: 1/1/13/13;
+}
+.form1{
+  position: relative;
+  z-index: 2;
+  grid-area: 1/1/13/13;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.box-form{
+  display: flex;
+  width: (40% max(100px));
+  background: #0b0c0ca5;
+  position: absolute;
+  margin-right: -45%;
+  height: 10%;
+  top: 87%;
+  border-radius: 5%;
+  justify-content: space-between;
+}
+.first-button{
+  border: none;
+  width: calc( 1px + 4vw );
+  max-width: 24px;
+  min-width: 16px;
+  height: auto;
+  background-color: transparent;
+  background: #0b0c0ca5;
+}
+.pokeballGW{
+  
+  width: 100%;
+  height: auto;
+  
+}
+.first-input{
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px dashed #fff;
+  width:  70%/*calc( 90px + 4vw );*/
+}
+.askName{
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  color: rgb(56, 227, 82);
+  margin-right: auto;
+  font-size: calc( 8px + 2vw);
+}
+.trainer{
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  color: rgb(56, 227, 82);
+  margin-right: auto;
+  font-size: calc( 10px + 2vw);
+}
+
+
+.ball-box{
+  position: absolute;
+  width: 9vw;
+  height: auto;
+  top:  1px;
+  left: calc(50vw - 40px);
+  z-index: 10;
+  -moz-animation: rotation  9s linear ;
+  -webkit-animation: rotation  9s linear ;
+  animation: rotation  9s linear  ;
+  animation-iteration-count: infinite;
+}
+
+   
+ 
+  @keyframes rotation {
+    0% { 
+      top:  4vh;
+      left: calc(50vw - 40px);
+      transform: rotate(0deg);
+    }
+    25% {
+      top: calc(50vh - 40px);
+      left: 89vw;
+      transform: rotate(360deg);
+    }
+    
+    50% {
+      top: 80vh;
+      left: calc(50vw - 40px);
+      transform: rotate(0deg);
+    }
+    75% {
+      top: calc(50vh - 40px);
+      left: 1vw ;
+      transform: rotate(360deg);
+    }
+    100% {
+      top:   4vh;
+      left: calc(50vw - 40px);
+      transform: rotate(0deg);
+    }
+}

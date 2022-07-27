@@ -1,0 +1,142 @@
+
+.pokemonCard{
+  width: 260px;
+  height: auto;
+  border-radius: 10%;
+  color: aliceblue;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5%;
+  cursor: pointer;
+  box-shadow: 0px 0px 12px 4px rgb(172, 15, 15);
+  padding-bottom: 10px;
+}
+.front_default-box{
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: 2%;
+  left: -5%;
+}
+#front_default{
+  width: 100%;
+  height: auto;
+  
+}
+.pokemonCard p{
+  border-radius: 25px;
+  color: rgb(255, 255, 255);
+  padding: .3em;
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  margin-top: 5px;
+  border: 1px solid rgba(34,36,38,.15);
+  background: hsla(0,0%,100%,.2);
+  width: 80%;
+  font-size: 14px;
+  font-family: monospace;
+  text-shadow:  1px 1px  10px  rgb(0, 0, 0)
+}
+.pokemonCard h3,
+.pokemonCard h4 {
+  margin-right: 30%;
+  font-family: 'Cormorant SC', serif;
+  text-shadow:  1px 1px  10px  rgb(0, 0, 0)
+}
+
+.orbitron{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+}
+.monospace{
+  font-family: monospace;
+}
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+.cormorant{
+  font-family: 'Cormorant SC', serif;
+}
+
+.ball-box2{
+  position: absolute;
+  width: 9vw;
+  height: auto;
+  top:  4vh;
+  left:  100px;
+  z-index: 10;
+  /* -moz-animation: rotation2  15s linear ;
+  -webkit-animation: rotation2  15s linear ; */
+  animation: rotation2 22s linear  ;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation2 {
+  0% { 
+    top:  4vh;
+    left:   100px;
+    transform: rotate(0deg);
+  }
+  10% {
+    top: calc(50vh - 40px);
+    left: 88vw;
+    transform: rotate(360deg);
+  }
+  20% {
+    top: 130vh;
+    left: 1vw;
+    transform: rotate(0deg)
+  }
+  30% {
+    top: 210vh;
+    left: 88vw;
+    transform: rotate(360deg);
+  }
+  40% {
+    top: 290vh;
+    left: 1vw;
+    transform: rotate(0deg);
+  }
+  
+  50% {
+    top: 370vh;
+    left:88vw;
+    transform: rotate(360deg);
+  }
+  60% {
+    top: 450vh;
+    left: 1vw;
+    transform: rotate(0deg);
+  }
+  70% {
+    top: 530vh;
+    left:88vw;
+    transform: rotate(360deg);
+  }
+  75% {
+    top: 570vh;
+    left: calc(50vw - 40px);
+    transform: rotate(180deg);
+  }
+  80% {
+    top: 530vh;
+    left: 1vw ;
+    transform: rotate(360deg);
+  }
+  85% {
+    top: 450vh;
+    left: 88vw;
+    transform: rotate(0deg);
+  }
+  90% {
+    top: 370vh;
+    left: 1vw;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 290vh;
+    left: 88vw;
+    transform: rotate(360deg);
+  }
+}
