@@ -124,7 +124,7 @@ const CharacterDetail = ( itemId ) => {
         
           <div className="progress-bar  cormorant" role="progressbar" aria-label="Hp" style= {{width: `${hp}%`}} aria-valuenow={hp} aria-valuemin="0" aria-valuemax="150">
           <p className='cormorant stat_name'>Hp:</p>
-          <span className='orbitron  number'>{stats?.[5].base_stat}/150</span>
+          <span className='orbitron  number'>{stats?.[0].base_stat}/150</span>
           </div>
         </div>
 
