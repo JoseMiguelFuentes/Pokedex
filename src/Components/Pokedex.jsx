@@ -95,17 +95,18 @@ const machine  =  ( text, time, element)=>{
 
   return (
     <div className='pokedex'>
-      <main  className='pokeGreet container-sm'>
-        <h1 className='cormorant'>Pokedex</h1>
-        <p style={{transition: 'all 0.5s ease'}} >{element}</p>
       
-        <form onSubmit={handleSubmit( find )} className='form2'>
-          <input id='input2' type="text" {...register( 'pokemonName' )} placeholder='Search a Pokemon'/>
+        <main  className='pokeGreet container-sm'>
+          <h1 className='cormorant'>Pokedex</h1>
+          <p style={{transition: 'all 0.5s ease'}} >{element}</p>
         
-        <button className='buttonPokeball'>
-        
-          <p className='pokebox'><img src={buttonPokeball} alt="pokeball"  className='pokeball'/></p></button>
-        </form>
+          <form onSubmit={handleSubmit( find )} className='form2'>
+            <input id='input2' type="text" {...register( 'pokemonName' )} placeholder='Search a Pokemon'/>
+          
+          <button className='buttonPokeball'>
+          
+            <p className='pokebox'><img src={buttonPokeball} alt="pokeball"  className='pokeball'/></p></button>
+          </form>
        
         <select onChange={typesFilter}>
           <option value={ 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20'    
@@ -120,6 +121,7 @@ const machine  =  ( text, time, element)=>{
           }
           </select>
           </main>
+          
       <ul className='items-box'>
       {
         paginated.map( item => 
