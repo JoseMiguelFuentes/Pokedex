@@ -14,6 +14,6 @@ export const userNameSlice = createSlice({
     //const counter = useSelector(state => state.counter) para acceder a un estado
 })
 
-export const { getName } = userNameSlice.actions;
+export const { getName } = userNameSlice.actions;//o userActions
 
 export default userNameSlice.reducer;

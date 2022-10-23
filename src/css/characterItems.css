@@ -44,6 +44,10 @@
   font-family: 'Cormorant SC', serif;
   text-shadow:  1px 1px  10px  rgb(0, 0, 0)
 }
+.pokemonCard:hover  #front_default{
+  transform: scale(1.6);
+}
+
 
 .orbitron{
   font-family: 'Orbitron', sans-serif;
@@ -68,7 +72,7 @@
   z-index: 10;
   /* -moz-animation: rotation2  15s linear ;
   -webkit-animation: rotation2  15s linear ; */
-  animation: rotation2 22s linear  ;
+  animation: rotation2 10s linear  ;
   animation-iteration-count: infinite;
 }
 
@@ -78,28 +82,31 @@
     left:   100px;
     transform: rotate(0deg);
   }
-  10% {
+  25% {
     top: calc(50vh - 40px);
     left: 88vw;
     transform: rotate(360deg);
   }
-  20% {
+  50% {
     top: 130vh;
     left: 1vw;
     transform: rotate(0deg)
   }
-  30% {
+  75% {
     top: 210vh;
     left: 88vw;
     transform: rotate(360deg);
   }
-  40% {
+  100% {
     top: 290vh;
     left: 1vw;
     transform: rotate(0deg);
   }
   
-  50% {
+  
+}
+/*
+50% {
     top: 370vh;
     left:88vw;
     transform: rotate(360deg);
@@ -139,4 +146,4 @@
     left: 88vw;
     transform: rotate(360deg);
   }
-}
+*/

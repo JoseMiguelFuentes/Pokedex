@@ -31,7 +31,7 @@ const GateWay = () => {
 
 
   return (
-    <div className='firstPage'>
+    <div className='firstPage' >
       <article className='ball-box'>
         <img id='ball' src={ball} alt="ball" />
       </article>
@@ -53,7 +53,6 @@ const GateWay = () => {
             </div>
           </form>
         
-       
       </div>
     </div>
   );

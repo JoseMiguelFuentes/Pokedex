@@ -4,7 +4,7 @@ import '../css/characterDetail.css'
 import pokelogo from '../Images/Pokelogo.png'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import ball from '../Images/pokeball_small.png'
 
 
@@ -18,6 +18,7 @@ const CharacterDetail = ( itemId ) => {
   const [ pokemonDetail,  setPokemonDetail ] = useState({})
 
   const { id } = useParams()
+  const navigate = useNavigate()
   
 
   useEffect( () =>{
@@ -63,10 +64,18 @@ const CharacterDetail = ( itemId ) => {
    const defense = stats?.[2].base_stat * (100/ 150)
    const hp = stats?.[0].base_stat * (100/ 150)
   
+  const goBack = () =>{
+    navigate('/pokedex')
+  }
   
 
   return (
-    <div style={{background: typesColors}}>
+    <div style={{background: typesColors}}
+    className='detail__container'>
+      <div id='back' onClick={goBack}
+      style={{color:`white`}}>
+        <i className='bx bx-arrow-back'></i>
+      </div>
       <article className='ball-box'>
         <img id='ball' src={ball} alt="ball" />
       </article>
@@ -94,7 +103,7 @@ const CharacterDetail = ( itemId ) => {
       </article>
       <div className='abilities' >
         <h3 >Abilities</h3>
-         {
+          {
           abilities?.map(element => (
             <div key={element.ability.name}>
               <p style={{ boxShadow: `0px 0px 8px 1px ${typesColors2}`}}
@@ -103,7 +112,7 @@ const CharacterDetail = ( itemId ) => {
             </div>   
           )
         )}
-       
+      
       </div>
         
       <div className='types'>

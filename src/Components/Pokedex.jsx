@@ -1,6 +1,8 @@
 
 import React from 'react';
 import buttonPokeball from '../Images/pokeball-3.png'
+import backGround from '../Images/bg3.jpg'
+
 import '../css/pokedex.css'
 
 //Librerias
@@ -29,7 +31,6 @@ const Pokedex = ( ) => {
   let defaultValues = {
     pokemonName: ''
   }
-   
   
   const navigate = useNavigate()
 
@@ -87,67 +88,78 @@ const machine  =  ( text, time, element)=>{
       machine( greeting, 155, element)
   },[])
 
-// const classButton = 
 
-// console.log(pokemonFiltered)
-// console.log(paginated)
-// console.log(types)
+  const pageOn = (number) =>{
+    if (page === number) {
+      return 'page-number page-on'
+    } else {
+      return 'page-number'
+    }
+  
+  }
+  const goHome = () =>{
+    navigate('/')
+  }
 
   return (
-    <div className='pokedex'>
-      
-        <main  className='pokeGreet container-sm'>
-          <h1 className='cormorant'>Pokedex</h1>
-          <p style={{transition: 'all 0.5s ease'}} >{element}</p>
-        
-          <form onSubmit={handleSubmit( find )} className='form2'>
-            <input id='input2' type="text" {...register( 'pokemonName' )} placeholder='Search a Pokemon'/>
-          
-          <button className='buttonPokeball'>
-          
-            <p className='pokebox'><img src={buttonPokeball} alt="pokeball"  className='pokeball'/></p></button>
-          </form>
-       
-        <select onChange={typesFilter}>
-          <option value={ 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20'    
-            }>All Pokemons</option>
-          {
-            types.map(type => (
-              <option  key={type.url}
-              value={type.url}
-              >{type.name}</option>
-              
-            ) )
-          }
-          </select>
-          </main>
-          
-      <ul className='items-box'>
-      {
-        paginated.map( item => 
-          <li key={item.name ?  item.name : item.pokemon.name} >
-            <CharacterItems url={item.url ? item.url : item.pokemon.url}/>
-          </li>
-           )
-      }
-      </ul>
-      <div className='pages-box'>
-        <button className='btn-main' type='button' onClick={() => setPage(page - 1)} disabled={page === 1}>
-          Previuos
-        </button>
-        
-        {numbers.map((number) => (
-          <div key={number} className='page-number'  onClick={() => setPage(number)
-          }>{number}</div>
-        ))}
-
-        <button className='btn-main' onClick={() => setPage(page + 1)} disabled={page === lastPage}>
-          Next
-        </button>
+    <div >
+      <div className='back' style={{color:`white`}} onClick={goHome}>
+        <i className='bx bx-log-out'></i>
       </div>
+      <div className='pokedex'>
       
+          <main  className='pokeGreet container-sm'>
+            <h1 className='cormorant'>Pokedex</h1>
+            <p style={{transition: 'all 0.5s ease'}} >{element}</p>
+          
+            <form onSubmit={handleSubmit( find )} className='form2'>
+              <input id='input2' type="text" {...register( 'pokemonName' )} placeholder='Search a Pokemon'/>
+            
+            <button className='buttonPokeball'>
+            
+              <p className='pokebox'><img src={buttonPokeball} alt="pokeball"  className='pokeball'/></p></button>
+            </form>
+        
+            <select onChange={typesFilter}>
+              <option value={ 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20'    
+              }>All Pokemons</option>
+              {
+              types.map(type => (
+                <option  key={type.url}
+                value={type.url}
+                >{type.name}</option>
+                
+              ) )
+              }
+            </select>
+          </main>
+            
+        <ul className='items-box'>
+        {
+          paginated.map( item => 
+            <li key={item.name ?  item.name : item.pokemon.name} >
+              <CharacterItems url={item.url ? item.url : item.pokemon.url}/>
+            </li>
+            )
+        }
+        </ul>
+        
+      </div>
+      <div className='pages-box'>
+          <button className='btn-main' type='button' onClick={() => setPage(page - 1)} disabled={page === 1}>
+            Previuos
+          </button>
+          
+          {numbers.map((number) => (
+            <div key={number} className={pageOn(number)}  onClick={() => setPage(number)
+            }>{number}</div>
+          ))}
+
+          <button className='btn-main' onClick={() => setPage(page + 1)} disabled={page === lastPage}>
+            Next
+          </button>
+        </div>
     </div>
-    
   );
 };
 
